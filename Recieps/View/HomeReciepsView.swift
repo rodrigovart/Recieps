@@ -6,21 +6,13 @@
 //
 
 import UIKit
+import SDWebImage
 
-class HomeReciepsView: UITableViewCell {
-    
-    var delegate: HomeReciepsViewController? {
-        didSet {
-            if let delegate = delegate {
-                self.delegate = delegate
-            }
-        }
-    }
-    
+class HomeReciepsView: UITableViewCell {    
     var meals: Meals? {
         didSet {
             if let meals = meals {
-                mealImage.loadFrom(URLAddress: meals.strMealThumb)
+                mealImage.sd_setImage(with: URL(string: meals.strMealThumb), placeholderImage: UIImage(named: meals.strMealThumb))
                 mealName.text = meals.strMeal
                 mealCategory.text = meals.strCategory
                 mealInstructions.text = meals.strInstructions
@@ -30,8 +22,7 @@ class HomeReciepsView: UITableViewCell {
     
     lazy var mealImage: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFill
-        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFit
         return image
     }()
     
@@ -52,7 +43,8 @@ class HomeReciepsView: UITableViewCell {
     lazy var mealInstructions: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        //        label.textColor = .white
+        label.numberOfLines = 2
+        label.size(size: .init(width: UIScreen.main.bounds.width, height: 50))
         return label
     }()
     
@@ -64,8 +56,9 @@ class HomeReciepsView: UITableViewCell {
         //        layer.cornerRadius = 20
         //        layer.masksToBounds = true
         
-        mealImage.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        mealImage.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        if let image = mealImage.image {
+            mealImage.image = image.resizeWithWidth(width: 100)
+        }
         
         mealImage.layer.cornerRadius = 20
         mealImage.layer.masksToBounds = true
@@ -73,9 +66,12 @@ class HomeReciepsView: UITableViewCell {
         let stackView = UIStackView()
         stackView.addArrangedSubview(mealImage)
         stackView.addArrangedSubview(mealName)
+        stackView.addArrangedSubview(UIView())
+        stackView.addArrangedSubview(UIView())
         
+        stackView.distribution = .fillEqually
         stackView.axis = .horizontal
-        stackView.spacing = 30
+        stackView.spacing = 20
         
         let stackViewWithInstructions = UIStackView()
         stackViewWithInstructions.addArrangedSubview(stackView)

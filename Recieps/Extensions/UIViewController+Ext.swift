@@ -17,11 +17,14 @@ extension UIViewController {
             ProgressHUD.dismiss()
         }
     }
-
+    
     func setupNavigationBar(title: String, image: String) {
-        let img = UIImage(named: image)!.withRenderingMode(.alwaysTemplate)
-        let image = UIBarButtonItem(image: img, style: .plain, target: self, action: nil)
-        navigationItem.rightBarButtonItem = image
+        if let image = UIImage(named: image) {
+            let img = image.withRenderingMode(.alwaysTemplate)
+            let image = UIBarButtonItem(image: img, style: .plain, target: self, action: nil)
+            navigationItem.rightBarButtonItem = image
+        }
         navigationItem.title = title
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }

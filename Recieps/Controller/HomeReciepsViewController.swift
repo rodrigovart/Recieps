@@ -67,14 +67,14 @@ extension HomeReciepsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 200
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailReciep = DetailReciepViewController()
-        detailReciep.modalPresentationStyle = .fullScreen
         detailReciep.meal = meals[indexPath.item]
+        detailReciep.modalPresentationStyle = .fullScreen
         
-        present(detailReciep, animated: true, completion: nil)
+        navigationController?.pushViewController(detailReciep, animated: true)
     }
 }

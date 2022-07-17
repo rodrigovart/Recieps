@@ -10,6 +10,7 @@ target 'Recieps' do
   pod 'RxCocoa', '6.5.0'
   pod 'ProgressHUD'
   pod 'Alamofire'
+  pod 'SDWebImage'
 
   target 'ReciepsTests' do
     inherit! :search_paths

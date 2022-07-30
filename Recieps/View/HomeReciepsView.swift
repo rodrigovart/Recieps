@@ -26,47 +26,27 @@ class HomeReciepsView: UITableViewCell {
         return image
     }()
     
-    lazy var mealName: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        //        label.textColor = .white
-        return label
-    }()
     
-    lazy var mealCategory: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        //        label.textColor = .white
-        return label
-    }()
+    lazy var mealName: UILabel = .textLabel(size: 18, textColor: .darkGray)
     
-    lazy var mealInstructions: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 2
-        label.size(size: .init(width: UIScreen.main.bounds.width, height: 50))
-        return label
-    }()
+    lazy var mealCategory: UILabel = .textLabel(size: 20, textColor: .darkGray)
+    
+    lazy var mealInstructions: UILabel = .textLabel(size: 15, textColor: .darkGray, numberOfLines: 2)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        //        backgroundColor = .systemGray
-        //
-        //        layer.cornerRadius = 20
-        //        layer.masksToBounds = true
-        
         if let image = mealImage.image {
             mealImage.image = image.resizeWithWidth(width: 100)
         }
-        
+
         mealImage.layer.cornerRadius = 20
         mealImage.layer.masksToBounds = true
-        
+        mealImage.addShadow()
+                
         let stackView = UIStackView()
         stackView.addArrangedSubview(mealImage)
         stackView.addArrangedSubview(mealName)
-        stackView.addArrangedSubview(UIView())
         stackView.addArrangedSubview(UIView())
         
         stackView.distribution = .fillEqually

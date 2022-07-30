@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class DetailReciepViewController: UIViewController {
     var meal: Meals? {
         didSet {
@@ -16,18 +15,15 @@ class DetailReciepViewController: UIViewController {
             }
         }
     }
-    
+
     private let scrollView: UIScrollView = {
         let view = UIScrollView()
-        view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private let stackViewContainer: UIStackView = {
         let view = UIStackView()
-        view.axis = .vertical
-        view.spacing = 10
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -37,24 +33,22 @@ class DetailReciepViewController: UIViewController {
         view.meals = meal
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
+        view.size(size: CGSize(width: UIScreen.main.bounds.width, height: 0))
+        view.sizeToFit()
         return view
     }()
-    
+
     override func viewDidLoad() {
         showLoader()
         setupUI()
     }
     
     func setupUI() {
-//        let margins = view.layoutMarginsGuide
-        
         setupNavigationBar(title: "Recieps Detail", image: "")
         
-        viewDetails.meals = meal
         viewDetails.setupUI()
-        
+
         view.addSubview(scrollView)
-        scrollView.addSubview(stackViewContainer)
         
         scrollView.fillView(
             top: view.topAnchor,
@@ -63,15 +57,15 @@ class DetailReciepViewController: UIViewController {
             bottom: view.bottomAnchor
         )
         
-        stackViewContainer.fillView(
+        scrollView.addSubview(viewDetails)
+        
+        viewDetails.fillView(
             top: scrollView.topAnchor,
             leading: scrollView.leadingAnchor,
             trailing: scrollView.trailingAnchor,
             bottom: scrollView.bottomAnchor
         )
-        
-        stackViewContainer.addArrangedSubview(viewDetails)
-  
+
         dissmisLoader()
     }
 }

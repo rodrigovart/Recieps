@@ -15,110 +15,67 @@ class DetailReciepView: UIView {
                 mealCategory.text = meals.strCategory
                 mealInstructions.text = meals.strInstructions
                 mealImage.sd_setImage(with: URL(string: meals.strMealThumb), placeholderImage: UIImage(named: meals.strMeal))
+                urlVideo = URL(string: meals.strYoutube)!
             }
         }
     }
-
-    lazy var viewImage: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
     
+    var urlVideo: URL?
+
     lazy var mealImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
+
+    lazy var mealName: UILabel = .textLabel(size: 18, textColor: .darkGray)
     
-    lazy var mealName: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        return label
-    }()
+    lazy var mealCategory: UILabel = .textLabel(size: 32, textColor: .darkGray)
     
-    lazy var mealCategory: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        return label
-    }()
-    
-    lazy var mealInstructions: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 100
-        label.textAlignment = .justified
-        label.size(size: .init(width: UIScreen.main.bounds.width, height: 200))
-        return label
-    }()
+    lazy var mealInstructions: UILabel = .textLabel(size: 15, textColor: .darkGray, numberOfLines: 0)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
     func setupUI() {
-        backgroundColor = .white
-
         if let image = mealImage.image {
-            mealImage.image = image.resizeWithWidth(width: 200)
+            mealImage.image = image.sd_resizedImage(with: CGSize(width: 300, height: 300), scaleMode: .fill)
         }
         
-        viewImage.addSubview(mealImage)
+        mealImage.centralizeSuperView()
+        mealImage.addShadow()
+        mealImage.layer.cornerRadius = 20
+        mealImage.layer.masksToBounds = true
+                
+        let stackView = UIStackView()
+        stackView.addArrangedSubview(mealImage)
+        stackView.addArrangedSubview(mealName)
+        stackView.addArrangedSubview(mealInstructions)
+        stackView.axis = .vertical
+        stackView.spacing = 10
         
-        mealImage.fillSuperView()
+        addSubview(stackView)
         
-        let stackViewHeader = UIStackView()
-        stackViewHeader.addArrangedSubview(viewImage)
-        stackViewHeader.distribution = .fillEqually
-        stackViewHeader.axis = .vertical
-        
-        addSubview(stackViewHeader)
-        
-        stackViewHeader.fillView(
+        stackView.fillView(
             top: topAnchor,
             leading: leadingAnchor,
             trailing: trailingAnchor,
-            bottom: nil,
-            padding: .init(top: 10, left: 0, bottom: 0, right: 0)
+            bottom: bottomAnchor,
+            padding: .init(top: 10, left: 10, bottom: -10, right: -10)
         )
         
-        mealImage.center = viewImage.center
+        mealName.sizeToFit()
+        mealName.textAlignment = .center
         
-        let stackViewMealName = UIStackView()
-        stackViewMealName.addArrangedSubview(UIView())
-        stackViewMealName.addArrangedSubview(mealName)
-        stackViewMealName.addArrangedSubview(UIView())
-        stackViewMealName.distribution = .fillEqually
-        stackViewMealName.axis = .vertical
+        mealInstructions.sizeToFit()
+        mealInstructions.textAlignment = .justified
+        mealInstructions.lineBreakMode = .byWordWrapping
         
-        addSubview(stackViewMealName)
-        
-        stackViewMealName.fillView(
-            top: stackViewHeader.bottomAnchor,
-            leading: leadingAnchor,
-            trailing: trailingAnchor,
-            bottom: nil
-        )
-        
-        let stackViewMealInstructions = UIStackView()
-        stackViewMealInstructions.addArrangedSubview(mealInstructions)
-        stackViewMealInstructions.distribution = .fillEqually
-        stackViewMealInstructions.axis = .vertical
-        
-        addSubview(stackViewMealInstructions)
-        
-        stackViewMealInstructions.fillView(
-            top: stackViewMealName.bottomAnchor,
-            leading: leadingAnchor,
-            trailing: trailingAnchor,
-            bottom: nil,
-            padding: .init(top: 0, left: 2, bottom: 0, right: -2)
-        )
+        layoutIfNeeded()
     }
-    
+
     required init(coder: NSCoder) {
         fatalError(coder.debugDescription)
     }

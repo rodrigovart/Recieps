@@ -24,7 +24,6 @@
 		9DFFE87E287B420C0027BCDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFFE87D287B420C0027BCDA /* Constants.swift */; };
 		9DFFE880287B4EC50027BCDA /* HomeReciepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFFE87F287B4EC50027BCDA /* HomeReciepsViewController.swift */; };
 		9DFFE882287B52E70027BCDA /* HomeReciepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFFE881287B52E70027BCDA /* HomeReciepsView.swift */; };
-		9DFFE884287B6DD90027BCDA /* HomeReciepsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFFE883287B6DD90027BCDA /* HomeReciepsViewModel.swift */; };
 		9DFFE886287B7A400027BCDA /* MealReciepsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFFE885287B7A400027BCDA /* MealReciepsAPI.swift */; };
 		9DFFE888287B7AFB0027BCDA /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFFE887287B7AFB0027BCDA /* Meals.swift */; };
 		9DFFE88D287BA69F0027BCDA /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFFE88C287BA69F0027BCDA /* UIViewController+Ext.swift */; };
@@ -72,7 +71,6 @@
 		9DFFE87D287B420C0027BCDA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9DFFE87F287B4EC50027BCDA /* HomeReciepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReciepsViewController.swift; sourceTree = "<group>"; };
 		9DFFE881287B52E70027BCDA /* HomeReciepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReciepsView.swift; sourceTree = "<group>"; };
-		9DFFE883287B6DD90027BCDA /* HomeReciepsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReciepsViewModel.swift; sourceTree = "<group>"; };
 		9DFFE885287B7A400027BCDA /* MealReciepsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealReciepsAPI.swift; sourceTree = "<group>"; };
 		9DFFE887287B7AFB0027BCDA /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 		9DFFE88C287BA69F0027BCDA /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				9DFFE87B287B41E10027BCDA /* Service */,
 				9DFFE87A287B41D00027BCDA /* Model */,
 				9DFFE879287B41C90027BCDA /* Controller */,
-				9DFFE878287B41C10027BCDA /* ViewModel */,
 				9DFFE877287B41BA0027BCDA /* View */,
 				9D9D0EA7287B3AB900EE8F17 /* AppDelegate.swift */,
 				9D9D0EA9287B3AB900EE8F17 /* SceneDelegate.swift */,
@@ -188,14 +185,6 @@
 				9DFFE892287BB9430027BCDA /* DetailReciepView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		9DFFE878287B41C10027BCDA /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				9DFFE883287B6DD90027BCDA /* HomeReciepsViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9DFFE879287B41C90027BCDA /* Controller */ = {
@@ -382,7 +371,6 @@
 				9DFFE88F287BB1420027BCDA /* UIView+Ext.swift in Sources */,
 				9D1904DE289363250062F6D9 /* UILabel+Ext.swift in Sources */,
 				9D9D0EAC287B3AB900EE8F17 /* ViewController.swift in Sources */,
-				9DFFE884287B6DD90027BCDA /* HomeReciepsViewModel.swift in Sources */,
 				9DFFE88D287BA69F0027BCDA /* UIViewController+Ext.swift in Sources */,
 				9DFFE882287B52E70027BCDA /* HomeReciepsView.swift in Sources */,
 				9DFFE886287B7A400027BCDA /* MealReciepsAPI.swift in Sources */,

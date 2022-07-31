@@ -39,7 +39,6 @@ class DetailReciepView: UIView {
     lazy var playerYTView: UIView = {
         let view = UIView()
         view.size(size: CGSize(width: 300, height: 300))
-        view.backgroundColor = .systemPink
         return view
     }()
     

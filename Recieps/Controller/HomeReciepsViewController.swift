@@ -12,15 +12,40 @@ class HomeReciepsViewController: UIViewController {
     var tableView: UITableView!
     let disposeBag = DisposeBag()
     var meals: [Meals] = []
+    var filteredMeals: [Meals] = []
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    var isSearchBarEmpty: Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    var isFiltering: Bool {
+        return searchController.isActive && !isSearchBarEmpty
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupSearchBar()
+        
         showLoader()
         
         setupTableView()
-
+        
         loadMeals()
+    }
+    
+    func setupSearchBar() {
+        // 1
+        searchController.searchResultsUpdater = self
+        // 2
+        searchController.obscuresBackgroundDuringPresentation = false
+        // 3
+        searchController.searchBar.placeholder = "Search Meals"
+        // 4
+        navigationItem.searchController = searchController
+        // 5
+        definesPresentationContext = true
     }
     
     override func loadView() {
@@ -39,7 +64,7 @@ class HomeReciepsViewController: UIViewController {
             guard let self = self else { return }
             result.subscribe(onNext: { meals in
                 self.meals = meals
-                self.setupNavigationBar(title: "Foods Recieps", image: "searchIcon")
+                self.setupNavigationBar(title: "Foods Recieps", image: "")
                 self.tableView.reloadData()
                 self.dissmisLoader()
             }, onError: { error in
@@ -53,16 +78,26 @@ extension HomeReciepsViewController: UITableViewDelegate {}
 
 extension HomeReciepsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering {
+            return filteredMeals.count
+        }
+        
         return meals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? HomeReciepsView else { return UITableViewCell() }
-        cell.meals = meals[indexPath.item]
+        
+        if isFiltering {
+            cell.meals = filteredMeals[indexPath.item]
+        } else {
+            cell.meals = meals[indexPath.item]
+        }
+        
         return cell
     }
     
@@ -72,9 +107,26 @@ extension HomeReciepsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailReciep = DetailReciepViewController()
-        detailReciep.meal = meals[indexPath.item]
-        detailReciep.modalPresentationStyle = .fullScreen
         
+        if isFiltering {
+            detailReciep.meal = filteredMeals[indexPath.item]
+        } else {
+            detailReciep.meal = meals[indexPath.item]
+        }
+        
+        detailReciep.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(detailReciep, animated: true)
+    }
+}
+
+extension HomeReciepsViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        filterContentForSearchText(searchBar.text!)
+    }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filteredMeals = meals.filter { $0.strMeal.lowercased().prefix(searchText.count) == searchText.lowercased() }
+        tableView.reloadData()
     }
 }

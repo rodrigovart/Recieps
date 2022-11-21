@@ -7,15 +7,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EFB86A83-80F9-414E-94D4-F66F4E4505F8"
+            uuid = "22F883A5-A222-47F7-BF58-3D38AA1702D5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Recieps/Controller/HomeReciepsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "loadMeals()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "883AE218-7D6F-4742-A462-A2791A8FC1FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Recieps/Controller/HomeReciepsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,279 +39,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "16D8842C-BA90-46BF-805C-29D41B2533C7"
+            uuid = "BD142A34-F29D-48AD-A7EF-2E1DBD506CA2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Recieps/Controller/DetailReciepViewController.swift"
+            filePath = "Recieps/Controller/HomeReciepsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewDetails"
-            landmarkType = "24">
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "loadMeals()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8CBFC841-4A24-4DCC-9D7F-03BE07D84947"
+            uuid = "0F0FA283-9266-45DD-8A8B-2AB1E7921E0D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Recieps/Controller/DetailReciepViewController.swift"
+            filePath = "Recieps/Controller/HomeReciepsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "viewDetails"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "8CBFC841-4A24-4DCC-9D7F-03BE07D84947 - 70de0750e27a2484"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.viewDetails.getter : Recieps.DetailReciepView"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "166">
-               </Location>
-               <Location
-                  uuid = "8CBFC841-4A24-4DCC-9D7F-03BE07D84947 - 72b07d3f8e99db55"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; Recieps.DetailReciepView in Recieps.DetailReciepViewController.viewDetails.getter : Recieps.DetailReciepView"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "53">
-               </Location>
-               <Location
-                  uuid = "8CBFC841-4A24-4DCC-9D7F-03BE07D84947 - 5dd235fafbc8a4b0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.viewDetails.setter : Recieps.DetailReciepView"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "132">
-               </Location>
-               <Location
-                  uuid = "8CBFC841-4A24-4DCC-9D7F-03BE07D84947 - c51831316ba277ed"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.viewDetails.modify : Recieps.DetailReciepView"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "8CBFC841-4A24-4DCC-9D7F-03BE07D84947 - db42f7287e47c757"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.viewDetails.modify : Recieps.DetailReciepView with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "17">
-               </Location>
-               <Location
-                  uuid = "8CBFC841-4A24-4DCC-9D7F-03BE07D84947 - 68e9491738521b76"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Recieps.DetailReciepViewController"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "273">
-               </Location>
-               <Location
-                  uuid = "8CBFC841-4A24-4DCC-9D7F-03BE07D84947 - a2bb336c74f33bba"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Recieps.DetailReciepViewController&gt;"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "230">
-               </Location>
-            </Locations>
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5DF3D8CC-ACE9-445F-8970-A4E4C1247EDF"
+            uuid = "D8E1CDA4-A133-4354-B9D5-0CB5F8D48C91"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Recieps/Controller/DetailReciepViewController.swift"
+            filePath = "Recieps/Controller/HomeReciepsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "meal"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "5DF3D8CC-ACE9-445F-8970-A4E4C1247EDF - 3425e1f96b2a9b3f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.meal.getter : Swift.Optional&lt;Recieps.Meals&gt;"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "334">
-               </Location>
-               <Location
-                  uuid = "5DF3D8CC-ACE9-445F-8970-A4E4C1247EDF - 9b935cb0316e270b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.meal.setter : Swift.Optional&lt;Recieps.Meals&gt;"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "360">
-               </Location>
-               <Location
-                  uuid = "5DF3D8CC-ACE9-445F-8970-A4E4C1247EDF - ae7d760411fefea8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.meal.modify : Swift.Optional&lt;Recieps.Meals&gt;"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  uuid = "5DF3D8CC-ACE9-445F-8970-A4E4C1247EDF - f137b54bb58586a2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.meal.modify : Swift.Optional&lt;Recieps.Meals&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "17">
-               </Location>
-               <Location
-                  uuid = "5DF3D8CC-ACE9-445F-8970-A4E4C1247EDF - 68e9491738521a8e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Recieps.DetailReciepViewController"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "127">
-               </Location>
-               <Location
-                  uuid = "5DF3D8CC-ACE9-445F-8970-A4E4C1247EDF - a2bb336c74f33a42"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Recieps.DetailReciepViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Recieps.DetailReciepViewController&gt;"
-                  moduleName = "Recieps"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rodrigovart/Documents/Projetos/Recieps/Recieps/Controller/DetailReciepViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "setupTableView()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D5B5DED5-791F-4BDD-98DA-61CF4FB7A39B"
+            uuid = "CB33BC96-F6BC-485F-BB8A-60B551354F5A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Recieps/Controller/DetailReciepViewController.swift"
+            filePath = "Recieps/Controller/HomeReciepsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "viewDetails"
-            landmarkType = "24">
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "setupCarousel()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CFDD0860-AE18-4BC4-9C9A-5FCFB03A98F5"
+            uuid = "45286542-A942-4155-AB65-7CB1782DBE08"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Recieps/View/DetailReciepView.swift"
+            filePath = "Recieps/Controller/HomeReciepsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "setupUI()"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "loadMeals()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

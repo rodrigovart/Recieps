@@ -11,7 +11,9 @@ target 'Recieps' do
   pod 'ProgressHUD'
   pod 'Alamofire'
   pod 'SDWebImage'
-  pod "youtube-ios-player-helper"
+  pod 'youtube-ios-player-helper'
+  pod 'ZKCarousel'
+  pod 'Kingfisher'
 
   target 'ReciepsTests' do
     inherit! :search_paths

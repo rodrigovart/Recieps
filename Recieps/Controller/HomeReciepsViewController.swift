@@ -6,13 +6,16 @@
 //
 
 import RxSwift
+import ZKCarousel
+import Kingfisher
+import UIKit
 
 class HomeReciepsViewController: UIViewController {
-    
-    var tableView: UITableView!
+
     let disposeBag = DisposeBag()
     var meals: [Meals] = []
     var filteredMeals: [Meals] = []
+    var slide: [ZKCarouselSlide] = []
     let searchController = UISearchController(searchResultsController: nil)
     
     var isSearchBarEmpty: Bool {
@@ -23,40 +26,56 @@ class HomeReciepsViewController: UIViewController {
         return searchController.isActive && !isSearchBarEmpty
     }
     
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.fillSuperView()
+        return tableView
+    }()
+    
+    lazy var carousel: ZKCarousel = {
+        let carousel = ZKCarousel()
+        carousel.size(size: CGSize(width: view.frame.width, height: 300))
+        return carousel
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupSearchBar()
-        
         showLoader()
-        
-        setupTableView()
-        
         loadMeals()
     }
     
     func setupSearchBar() {
-        // 1
         searchController.searchResultsUpdater = self
-        // 2
         searchController.obscuresBackgroundDuringPresentation = false
-        // 3
         searchController.searchBar.placeholder = "Search Meals"
-        // 4
         navigationItem.searchController = searchController
-        // 5
         definesPresentationContext = true
     }
     
-    override func loadView() {
-        tableView = UITableView(frame: .zero)
-        self.view = tableView
+    func setupCarousel() {
+        view.addSubview(carousel)
+        carousel.fillView(
+            top: view.topAnchor,
+            leading: view.leadingAnchor,
+            trailing: view.trailingAnchor,
+            bottom: nil
+        )
     }
-    
+
     func setupTableView() {
         tableView.register(HomeReciepsView.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
+        
+        view.addSubview(tableView)
+        tableView.fillView(
+            top: carousel.bottomAnchor,
+            leading: view.leadingAnchor,
+            trailing: view.trailingAnchor,
+            bottom: view.bottomAnchor
+        )
     }
     
     func loadMeals() {
@@ -65,7 +84,10 @@ class HomeReciepsViewController: UIViewController {
             result.subscribe(onNext: { meals in
                 self.meals = meals
                 self.setupNavigationBar(title: "Foods Recieps", image: "")
+                self.setupCarousel()
+                self.setupTableView()
                 self.tableView.reloadData()
+                self.carousel.slides = self.slide
                 self.dissmisLoader()
             }, onError: { error in
                 print(error)
@@ -97,6 +119,8 @@ extension HomeReciepsViewController: UITableViewDataSource {
         } else {
             cell.meals = meals[indexPath.item]
         }
+        
+  
         
         return cell
     }

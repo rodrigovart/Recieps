@@ -13,9 +13,9 @@ extension UIViewController {
     }
     
     func dissmisLoader() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             ProgressHUD.dismiss()
-        }
+//        }
     }
     
     func setupNavigationBar(title: String, image: String) {

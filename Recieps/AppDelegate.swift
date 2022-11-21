@@ -18,11 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coloredAppearance.backgroundColor = UIColor(named: "Primary")
         coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        
+
         UINavigationBar.appearance().standardAppearance = coloredAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
         UINavigationBar.appearance().tintColor = .white
-        
+
         return true
     }
     

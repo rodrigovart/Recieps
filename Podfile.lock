@@ -1,5 +1,6 @@
 PODS:
-  - Alamofire (5.6.1)
+  - Alamofire (5.6.2)
+  - Kingfisher (7.3.1)
   - ProgressHUD (13.6)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
@@ -7,32 +8,45 @@ PODS:
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
-  - SwiftyJSON (5.0.1)
+  - SDWebImage (5.13.2):
+    - SDWebImage/Core (= 5.13.2)
+  - SDWebImage/Core (5.13.2)
+  - youtube-ios-player-helper (1.0.4)
+  - ZKCarousel (1.1.1)
 
 DEPENDENCIES:
   - Alamofire
+  - Kingfisher
   - ProgressHUD
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
-  - SwiftyJSON
+  - SDWebImage
+  - youtube-ios-player-helper
+  - ZKCarousel
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
     - ProgressHUD
     - RxCocoa
     - RxRelay
     - RxSwift
-    - SwiftyJSON
+    - SDWebImage
+    - youtube-ios-player-helper
+    - ZKCarousel
 
 SPEC CHECKSUMS:
-  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  Kingfisher: f411ab4902e733fc0c40522920fb5a236d7a7334
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
-  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
+  youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
+  ZKCarousel: e54940a77f4b635e650ea0361608db836a776feb
 
-PODFILE CHECKSUM: c5776070a9428b8761dac29fa80e52f26e7c8594
+PODFILE CHECKSUM: 740c373b490e178ba9f2c2ff4b64df14843714c7
 
 COCOAPODS: 1.11.3
